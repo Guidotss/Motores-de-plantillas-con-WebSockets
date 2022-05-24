@@ -1,1 +1,21 @@
-/* No CSS *//*# sourceMappingURL=estilos.css.map */
+.card {
+  margin-bottom: 20px;
+}
+
+.card form input {
+  margin-bottom: 10px;
+}
+
+#mail {
+  width: 20%;
+}
+
+#mensaje {
+  width: 20%;
+  margin-top: 10%;
+}
+
+strong {
+  color: lightblue;
+}
+/*# sourceMappingURL=estilos.css.map */

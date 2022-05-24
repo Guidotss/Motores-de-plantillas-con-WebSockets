@@ -6,15 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/sass/estilos.css">
+
     <title>Agregar Productos</title>
 </head>
 <body>
-    <form action="/productos" method="post">
-        <input type="text" placeholder="Nombre del producto..." class="form-control" name="nombre">
-        <input type="number" placeholder="Precio..." class="form-control" name="precio">
-        <input type="url" placeholder="Url..." class="form-control" name="url">
-        <button id="Add" class="btn btn-primary">Agregar</button>
-    </form>
+    <div class="card">
+       <div class="card-body">
+        <h5 class="card-title">Agregar productos</h5>
+            <form id="form" action="/productos" method="post">
+                <input id="nombre" type="text" placeholder="Nombre del producto..." class="form-control" name="nombre">
+                <input id="precio" type="number" placeholder="Precio..." class="form-control" name="precio">
+                <input id="url" type="url" placeholder="Url..." class="form-control" name="url">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
+       </div>
+    </div>
+
+    <div id="productos"></div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Centro de mensajes</h5>
+            <input id="mail" type="email" placeholder="email..." class="form-control">
+            <hr>
+            <div id="mensajes"></div>
+            <input id="mensaje" type="text" class="form-control" name="mensaje" placeholder="mensaje...">
+            <button id="enviar" class="btn btn-secondary">Enviar</button>
+        </div>
+    </div>
 <script src="./socket.io/socket.io.min.js"></script>
 <script src="../main.js"></script>
 </body>
