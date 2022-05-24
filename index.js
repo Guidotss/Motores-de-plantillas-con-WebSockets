@@ -11,6 +11,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true})); 
 app.use(express.static(__dirname +'public')); 
 
+app.set('views', 'views'); 
+app.set('view engine','ejs'); 
+
 
 io.on('connection',(client) =>{
     console.log('websocket funcionando',client.id);
